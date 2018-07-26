@@ -13,7 +13,7 @@ private let kCollectionViewCellID = "kCollectionViewCellID"
 
 class ViewController: UIViewController {
     
-    var isPageView : Bool = false
+    var vcType : JPVCType = .pageView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             automaticallyAdjustsScrollViewInsets = false
         }
         
-        if isPageView {
+        if vcType == .pageView {
             title = "PageView"
             setupPageView()
         } else {

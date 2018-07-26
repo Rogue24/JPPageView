@@ -10,15 +10,19 @@ import UIKit
 
 private let kCellID = "kCellID"
 
+enum JPVCType {
+    case pageView
+    case pageCollectionView
+}
+
 class TableViewController: UITableViewController {
 
+    fileprivate var vcTitles : [JPVCType] = [.pageView, .pageCollectionView]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Example"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellID)
-        
-//        let a = JPPageView()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,18 +37,19 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return vcTitles.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellID, for: indexPath)
-        cell.textLabel?.text = indexPath.row == 0 ? "PageView" : "PageCollectionView"
+        let vcType = vcTitles[indexPath.row]
+        cell.textLabel?.text = vcType == .pageView ? "PageView" : "PageCollectionView"
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ViewController()
-        vc.isPageView = indexPath.row == 0
+        vc.vcType = vcTitles[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 
