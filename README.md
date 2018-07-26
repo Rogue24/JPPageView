@@ -5,20 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/JPPageView.svg?style=flat)](https://cocoapods.org/pods/JPPageView)
 [![Platform](https://img.shields.io/cocoapods/p/JPPageView.svg?style=flat)](https://cocoapods.org/pods/JPPageView)
 
-## Example
+## 简介
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-JPPageView is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'JPPageView'
-```
+Swift分页视图框架（Demo）
 
 ## Author
 
