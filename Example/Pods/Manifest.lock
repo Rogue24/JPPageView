@@ -1,0 +1,16 @@
+PODS:
+  - JPPageView (0.1.0)
+
+DEPENDENCIES:
+  - JPPageView (from `../`)
+
+EXTERNAL SOURCES:
+  JPPageView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JPPageView: 79baf82b569a998c8d099b8a79ed1e1a6c82812b
+
+PODFILE CHECKSUM: 086e620681949c5a34d44eb7f1eff9d68d637b95
+
+COCOAPODS: 1.5.3

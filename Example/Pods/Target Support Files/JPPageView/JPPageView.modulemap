@@ -1,0 +1,6 @@
+framework module JPPageView {
+  umbrella header "JPPageView-umbrella.h"
+
+  export *
+  module * { export * }
+}
