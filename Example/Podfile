@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JPPageView_Example' do
+  pod 'JPPageView', :path => '../'
+
+  target 'JPPageView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
