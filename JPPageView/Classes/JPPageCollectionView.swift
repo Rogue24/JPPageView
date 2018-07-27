@@ -169,8 +169,6 @@ extension JPPageCollectionView : JPTitleViewDelegate {
             collectionView.contentOffset.x -= layout.sectionInsets.left
         }
         
-        // 4.
-        
         // 4.设置pageControl
         let items = jp_dataSource?.jp_pageCollectionView(self, numberOfItemsInSection: targetIndex) ?? 0
         let numberOfPages = (items - 1) / (layout.colCount * layout.rowCount) + 1
